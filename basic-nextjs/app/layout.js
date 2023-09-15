@@ -1,7 +1,11 @@
+import { Suspense } from "react";
+import { Rubik } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import Header from "./components/Header";
+import Loading from "./loading";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata = {
   title: "basic NextJS",
@@ -11,10 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="flex justify-center py-4">
-          <h1 className="font-[900] text-[82px]">The Times</h1>
-        </header>
+      <body className={rubik.className}>
+        <Header />
+        <Suspense fallback={<Loading />} />
         {children}
       </body>
     </html>
