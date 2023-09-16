@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 const NavWithLinks = () => {
-    
   // list of blog posts
   const postsList = [
     {
