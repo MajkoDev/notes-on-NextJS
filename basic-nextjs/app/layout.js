@@ -1,3 +1,10 @@
+/*
+  TODO: Layouts
+  * layouts are shared between multiple pages
+  * preserve state, remain interactive, and do not re-render
+  * can be nested
+*/
+
 import { Suspense } from "react";
 import { Rubik } from "next/font/google";
 import "./globals.css";
@@ -11,6 +18,8 @@ export const metadata = {
   title: "basic NextJS",
   description: "NextJS application with basic features",
 };
+
+// * root layout - on top of app directory - applies to all routes
 
 export default function RootLayout({ children }) {
   return (
