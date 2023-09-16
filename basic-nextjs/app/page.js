@@ -1,11 +1,15 @@
-import Link from "next/link";
+
+// navbar created with Link Components
+import NavWithHook from "./components/NavWithHook";
+// navbar created with useRouter Hook
+import NavWithLinks from "./components/NavWithLinks";
+
 
 export default function Page() {
   return (
     <div>
-      <nav className="flex flex-row justify-center gap-5 font-semibold text-lg">
-        <Link href="/blog">Blog</Link>
-      </nav>
+      <NavWithLinks />
+      <NavWithHook />
       <h1>Hello, Next.js!</h1>
     </div>
   );

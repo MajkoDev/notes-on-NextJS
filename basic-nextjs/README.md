@@ -15,4 +15,13 @@ Templates
 - *when?* - features relies on *useEffect* (e.g logging page views) or *useState* (e.g a per-page feedback form)
 - template.js is rendered between a layout and its children. 
 
+Linking and Navigating
+- there are two ways of navigation between routes in NextJS
+- using Link Component / useRouter Hook
+- use Link unsell you have a specific requirement for using useRouter
 
+Link Component
+- generally used for client-side navigation (does not perform server-side rendering).
+
+useRouter Hook
+- provides control over navigation (based on conditions or events)
